@@ -8,7 +8,7 @@
 
 html {
   background: linear-gradient($softviolet, $softblue);
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
 }
 
 body {
@@ -32,21 +32,54 @@ body {
  &__image {
    position: relative;
    padding: 3.125rem 0;
+   z-index: 50;
    #ill {
     position: absolute;
     top: -18.75rem;
     left: -36.25rem;
+    z-index: 40;
   }
   &__container{
-    margin-left: -5rem;
+    overflow: hidden;
+    picture {
+      margin-left: -5rem;
+    }
   }
- }
  
+ }
  &__box {
   position: absolute;
   top: 11.875rem;
   left: -5.625rem;
  }
+}
+
+.question {
+  padding: 3.125rem;
+  padding-bottom: 1.875rem;
+  .title {
+    color: $verydarkgrayishblue;
+    font-size: 1.75rem;
+    padding-bottom: 1.25rem;
+  }
+  div {
+    border-bottom: 1px solid $lightgrayishblue;
+  }
+  span {
+    float: right;
+  }
+  label {
+    color: $verydarkgrayishblue;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.938rem 0.938rem 0.938rem 0;
+  }
+  label:hover {
+    color: $softred;
+    transition: 0.4s;
+  }
 }
 
 // h3{

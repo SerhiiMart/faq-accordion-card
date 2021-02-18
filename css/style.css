@@ -11,7 +11,6 @@
 html {
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
-  font-size: 0.75rem;
 }
 
 body {
@@ -42,15 +41,21 @@ body {
 .main__image {
   position: relative;
   padding: 3.125rem 0;
+  z-index: 50;
 }
 
 .main__image #ill {
   position: absolute;
   top: -18.75rem;
   left: -36.25rem;
+  z-index: 40;
 }
 
 .main__image__container {
+  overflow: hidden;
+}
+
+.main__image__container picture {
   margin-left: -5rem;
 }
 
@@ -58,5 +63,39 @@ body {
   position: absolute;
   top: 11.875rem;
   left: -5.625rem;
+}
+
+.question {
+  padding: 3.125rem;
+  padding-bottom: 1.875rem;
+}
+
+.question .title {
+  color: #4a4b5e;
+  font-size: 1.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.question div {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.question span {
+  float: right;
+}
+
+.question label {
+  color: #4a4b5e;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.938rem 0.938rem 0.938rem 0;
+}
+
+.question label:hover {
+  color: #f47c57;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 /*# sourceMappingURL=style.css.map */
