@@ -16,90 +16,47 @@ html {
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  height: 100vh;
-  width: 100vw;
-  display: -ms-grid;
-  display: grid;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main {
+  width: 58.125rem;
+  border-radius: 1.25rem;
   background-color: white;
-  background-image: url("/images/bg-pattern-desktop.svg");
-  background-repeat: no-repeat;
-  border-radius: 1.875rem;
-  height: 31.813rem;
-  width: 57.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25rem 1fr;
-      grid-template-columns: 25rem 1fr;
-  grid-gap: 6rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin: 1.563rem;
 }
 
 .main__image {
   position: relative;
+  padding: 3.125rem 0;
+}
+
+.main__image #ill {
+  position: absolute;
+  top: -18.75rem;
+  left: -36.25rem;
 }
 
 .main__image__container {
-  background-image: url("/images/illustration-woman-online-desktop.svg");
-  background-repeat: no-repeat;
-  height: 100%;
+  margin-left: -5rem;
 }
 
-h3 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 1.4rem 0;
-  color: #4a4b5e;
-}
-
-.content {
-  margin-top: 1.875rem;
-}
-
-.content .title {
-  font-size: 2rem;
-}
-
-.questions {
-  height: 100%;
-  margin-top: 0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.questions__container {
-  width: 21.875rem;
-  border-bottom: 0.063rem solid #e7e7e9;
-}
-
-.questions__container .question {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  cursor: pointer;
-}
-
-.questions__container .question img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.questions__container .answer {
-  display: none;
+.main__box {
+  position: absolute;
+  top: 11.875rem;
+  left: -5.625rem;
 }
 /*# sourceMappingURL=style.css.map */
