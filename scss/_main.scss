@@ -61,11 +61,21 @@ body {
  }
  &__box {
   position: absolute;
+  opacity: 1;
   top: 11.875rem;
-  left: -5.625rem;
+  left: -5.725rem;
   @media (max-width: 790px){
     display: none;
    }
+  &__moved{
+  opacity: 0;
+  position: absolute;
+  top: 11.875rem;
+  left: -7.725rem;
+  @media (max-width: 790px){
+    display: none;
+   }
+  } 
  }
  @media (max-width: 790px){
   max-width: 28.125rem;
@@ -78,9 +88,10 @@ body {
   padding: 3.125rem;
   padding-bottom: 1.875rem;
   .title {
-    color: $verydarkgrayishblue;
+    color: $verydarkdesaturatedblue;
     font-size: 1.75rem;
     padding-bottom: 1.25rem;
+    font-weight: 700;
   }
   div {
     border-bottom: 1px solid $lightgrayishblue;
@@ -142,5 +153,10 @@ body {
     color: $softred;
     background-color: transparent;
     text-decoration: none;
+  }
+  a:hover {
+    color: $lightgrayishblue;
+    text-decoration: none;
+    transition: 0.5s;
   }
 }
