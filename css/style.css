@@ -11,6 +11,8 @@
 html {
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 body {
@@ -51,6 +53,13 @@ body {
   z-index: 40;
 }
 
+@media (max-width: 790px) {
+  .main__image #ill {
+    top: 6.25rem;
+    left: -3.125rem;
+  }
+}
+
 .main__image__container {
   overflow: hidden;
 }
@@ -59,10 +68,38 @@ body {
   margin-left: -5rem;
 }
 
+@media (max-width: 790px) {
+  .main__image__container {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 790px) {
+  .main__image {
+    padding: 0;
+    margin: -6.86rem auto 0;
+  }
+}
+
 .main__box {
   position: absolute;
   top: 11.875rem;
   left: -5.625rem;
+}
+
+@media (max-width: 790px) {
+  .main__box {
+    display: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .main {
+    max-width: 28.125rem;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin-top: 7.5rem;
+  }
 }
 
 .question {
@@ -82,6 +119,8 @@ body {
 
 .question span {
   float: right;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .question label {
@@ -91,11 +130,60 @@ body {
   width: 100%;
   text-align: left;
   padding: 0.938rem 0.938rem 0.938rem 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .question label:hover {
   color: #f47c57;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+}
+
+.question .answer {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 0.313rem 0;
+  color: #787887;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.question input {
+  display: none;
+}
+
+.question input:checked ~ .answer {
+  height: 4rem;
+  opacity: 1;
+}
+
+.question input:checked ~ label {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.question input:checked ~ label span {
+  -webkit-transform: rotate(-540deg);
+          transform: rotate(-540deg);
+  -webkit-transform: scale(2, 0.5s);
+          transform: scale(2, 0.5s);
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.attribution {
+  position: absolute;
+  display: inline-block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  font-size: 11px;
+}
+
+.attribution a:link {
+  color: #f47c57;
+  background-color: transparent;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

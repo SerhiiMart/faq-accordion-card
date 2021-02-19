@@ -8,6 +8,8 @@
 
 html {
   background: linear-gradient($softviolet, $softblue);
+  background-repeat: no-repeat;
+  overflow: hidden;
   // font-size: 0.75rem;
 }
 
@@ -38,19 +40,37 @@ body {
     top: -18.75rem;
     left: -36.25rem;
     z-index: 40;
+    @media (max-width: 790px){
+      top: 6.25rem;
+      left: -3.125rem;
+     }
   }
   &__container{
     overflow: hidden;
     picture {
       margin-left: -5rem;
     }
+    @media (max-width: 790px){
+      overflow: visible;
+     }
   }
- 
+  @media (max-width: 790px){
+    padding: 0;
+    margin: -6.86rem auto 0;
+   }
  }
  &__box {
   position: absolute;
   top: 11.875rem;
   left: -5.625rem;
+  @media (max-width: 790px){
+    display: none;
+   }
+ }
+ @media (max-width: 790px){
+  max-width: 28.125rem;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 7.5rem;
  }
 }
 
@@ -67,6 +87,7 @@ body {
   }
   span {
     float: right;
+    transition: 0.5s;
   }
   label {
     color: $verydarkgrayishblue;
@@ -75,45 +96,51 @@ body {
     width: 100%;
     text-align: left;
     padding: 0.938rem 0.938rem 0.938rem 0;
+    transition: 0.7s;
+    &:hover {
+      color: $softred;
+    }
   }
-  label:hover {
-    color: $softred;
-    transition: 0.4s;
+  .answer {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0.313rem 0;
+    color: $darkgrayishblue;
+    font-size: 0.875rem;
+    transition: all 0.7s;
   }
+  input {
+    display: none;
+    &:checked ~ .answer {
+      height: 4rem;
+      opacity: 1;
+    }
+    &:checked ~ label {
+      color:$verydarkdesaturatedblue;
+      font-weight: 700;
+    }
+    &:checked ~ label span {
+      // transform: rotate3d(1, 2.0, 3.0, 540deg);
+      transform: rotate(-540deg);
+      transform: scale(2, 0.5s);
+      transition: 0.9s;
+    }
+  }
+   
 }
 
-// h3{
-//   font-size: 1.2rem;
-//   font-weight: 400;
-//   margin: 1.4rem 0;
-//   color: $verydarkgrayishblue;
-// }
-// .content {
-//   margin-top: 1.875rem;
-
-//   .title {
-//     font-size: 2rem;
-    
-//   }
-// }
-// .questions {
-//   height: 100%;
-//   margin-top: 0rem;
-//   display: flex;
-//   flex-direction: column;
-//   &__container {
-//     width: 21.875rem;
-//     border-bottom: 0.063rem solid $lightgrayishblue;
-//     .question {
-//       display: flex;
-//       justify-content: space-between;
-//       cursor: pointer;
-//       img {
-//         align-self: center;
-//       }
-//     }
-//     .answer{
-//       display: none;
-//     }
-//   }
-// }
+.attribution {
+  position: absolute;
+  display: inline-block;
+  align-self: flex-end;
+  text-align: center;
+  font-size: 11px; 
+  // margin-top: 1rem;
+  // bottom: 1rem;
+  a:link {
+    color: $softred;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
