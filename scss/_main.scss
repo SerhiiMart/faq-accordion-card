@@ -61,15 +61,15 @@ body {
  }
  &__box {
   position: absolute;
-  opacity: 1;
+  visibility: visible;
   top: 11.875rem;
   left: -5.725rem;
   @media (max-width: 790px){
     display: none;
    }
   &__moved{
-  opacity: 0;
   position: absolute;
+  visibility: hidden;
   top: 11.875rem;
   left: -7.725rem;
   @media (max-width: 790px){
