@@ -15,6 +15,12 @@ html {
   overflow: hidden;
 }
 
+@media (max-width: 790px) {
+  html {
+    overflow-y: scroll;
+  }
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   min-height: 100vh;
@@ -83,7 +89,6 @@ body {
 
 .main__box {
   position: absolute;
-  visibility: visible;
   top: 11.875rem;
   left: -5.725rem;
 }
@@ -96,7 +101,6 @@ body {
 
 .main__box__moved {
   position: absolute;
-  visibility: hidden;
   top: 11.875rem;
   left: -7.725rem;
 }

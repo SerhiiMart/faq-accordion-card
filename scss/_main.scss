@@ -10,6 +10,9 @@ html {
   background: linear-gradient($softviolet, $softblue);
   background-repeat: no-repeat;
   overflow: hidden;
+  @media (max-width: 790px){
+    overflow-y: scroll;
+   }
   // font-size: 0.75rem;
 }
 
@@ -61,15 +64,13 @@ body {
  }
  &__box {
   position: absolute;
-  visibility: visible;
   top: 11.875rem;
   left: -5.725rem;
   @media (max-width: 790px){
     display: none;
    }
-  &__moved{
+  &__moved {
   position: absolute;
-  visibility: hidden;
   top: 11.875rem;
   left: -7.725rem;
   @media (max-width: 790px){

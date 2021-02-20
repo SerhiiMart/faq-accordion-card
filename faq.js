@@ -5,18 +5,34 @@ values.forEach(input =>{input.addEventListener('click', (x) => {
       x.target.checked = true;
     }
   })
-})});
+})})
 
-let boxmoved = document.getElementById('boxD');
-let boxmain = document.getElementsByClassName('main__box');
-let labels = document.querySelectorAll('label');
-labels.addEventListener('mouseover', (x) => { 
-    x.boxmoved.style.visibility = "visible";
-  });
-// function show(id) {
-//   document.getElementById(id).style.visibility = "visible";
-// }
-// function hide(id) {
-//   document.getElementById(id).style.visibility = "hidden";
-// }
+window.addEventListener("DOMContentLoaded", function() {
+var boxmoved = document.getElementById("boxm");
+var boxmain = document.getElementById("box");
+boxmoved.style.visibility = "visible";
+boxmain.style.visibility = "hidden";
 
+var labels = document.getElementsByTagName("label");
+var labelsList = Array.prototype.slice.call(labels);
+
+labelsList.forEach(l=>{
+  l.addEventListener("mouseenter", func);
+  l.addEventListener("mouseleave", funks);
+})
+  
+})
+
+var func = function () {
+  var boxmoved = document.getElementById("boxm");
+  var boxmain = document.getElementById("box");
+  boxmoved.style.visibility = "visible";
+  boxmain.style.visibility = "hidden";
+}
+
+var funks = function () {
+  var boxmoved = document.getElementById("boxm");
+  var boxmain = document.getElementById("box");
+  boxmoved.style.visibility = "hidden";
+  boxmain.style.visibility = "visible";
+}
