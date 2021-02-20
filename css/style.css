@@ -53,7 +53,9 @@ body {
 }
 
 .main__image #ill {
+  height: 100%;
   position: absolute;
+  overflow: hidden !important;
   top: -18.75rem;
   left: -36.25rem;
   z-index: 40;
@@ -62,6 +64,7 @@ body {
 @media (max-width: 790px) {
   .main__image #ill {
     top: 6.25rem;
+    overflow: hidden !important;
     left: -3.125rem;
   }
 }
@@ -211,5 +214,10 @@ body {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+#fixer {
+  height: 30%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
